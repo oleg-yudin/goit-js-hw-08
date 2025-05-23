@@ -87,10 +87,11 @@ container.addEventListener("click", modal);
 
 function modal(event) {
     event.preventDefault();
-    if (event.currentTarget === event.target) {
+     console.log(event.target.nodeName);
+    if (event.target.nodeName !== "IMG") {
         return;
     }
-    console.log(event.target.dataset.source);
+   
 
 
     const instance = basicLightbox.create(
